@@ -31,11 +31,12 @@ function App() {
     });
   };
 
+  
   return (
     <div className="app-container">
-      <h1>Date & Time Logs</h1>
-      <button onClick={addDate}>Add Current Date & Time</button>
-      <button onClick={deleteAll} className="delete-btn">Delete All</button>
+      <h1> DJ </h1>
+      <button onClick={addDate}> Missing++ </button>
+      <button onClick={deleteAll} className="delete-btn">Clear</button>
       <ul>
         {dates.map((date, index) => (
           <li key={index}>{date}</li>
