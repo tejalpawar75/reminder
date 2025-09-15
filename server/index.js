@@ -13,7 +13,6 @@ app.use(express.json());
 
 // Use Atlas connection string here 👇tDYBCdnvYitxvJKP
 const mongoURI = process.env.MONGO_URI
-// const mongoURI = "mongodb+srv://pawartejal598:tDYBCdnvYitxvJKP@cluster0.h0pr8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 mongoose.connect(mongoURI, {
