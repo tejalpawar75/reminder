@@ -25,7 +25,7 @@ mongoose.connect(mongoURI, {
 const dateSchema = new mongoose.Schema({
   datetime: { type: String, required: true }
 });
-
+//
 const DateLog = mongoose.model("DateLog", dateSchema);
 
 // POST: Save new datetime
