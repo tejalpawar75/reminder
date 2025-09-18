@@ -6,7 +6,7 @@ function App() {
 
   // Fetch logs from server when component mounts
   useEffect(() => {
-    fetch("http://localhost:5000/api/dates")
+    fetch("https://reminder-c4ut.onrender.com/api/dates")
       .then((res) => res.json())
       .then((data) => setDates(data));
   }, []);
@@ -16,7 +16,7 @@ function App() {
     const now = new Date().toLocaleString();
     setDates((prev) => [...prev, now]);
 
-    await fetch("http://localhost:5000/api/dates", {
+    await fetch("https://reminder-c4ut.onrender.com/api/dates", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ datetime: now }),
@@ -26,16 +26,17 @@ function App() {
   // Delete all dates
   const deleteAll = async () => {
     setDates([]); // Clear frontend state immediately
-    await fetch("http://localhost:5000/api/dates", {
+    await fetch("https://reminder-c4ut.onrender.com/api/dates", {
       method: "DELETE",
     });
   };
 
+  
   return (
     <div className="app-container">
-      <h1>Date & Time Logs</h1>
-      <button onClick={addDate}>Add Current Date & Time</button>
-      <button onClick={deleteAll} className="delete-btn">Delete All</button>
+      <h1> DJ </h1>
+      <button onClick={addDate}> Missing++ </button>
+      <button onClick={deleteAll} className="delete-btn">Clear</button>
       <ul>
         {dates.map((date, index) => (
           <li key={index}>{date}</li>
